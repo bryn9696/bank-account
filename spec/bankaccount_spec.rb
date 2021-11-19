@@ -21,4 +21,9 @@ describe BankAccount do
         expect(bank_account).to respond_to(:deposit).with(1).argument
     end
 
+    it 'updates balance when user deposit money into bank account' do
+        bank_account = BankAccount.new
+        bank_account.deposit(10)
+        expect(bank_account.balance).to eq(10)
+    end
 end
