@@ -5,11 +5,11 @@ class BankAccount
         @balance = 0
     end
 
-    def balance
-        @balance
+    def deposit(money)
+        @balance +=  money
     end
 
-    def deposit(money)
-        @balance = @balance +  money
+    def withdraw(money)
+        
     end
 end
