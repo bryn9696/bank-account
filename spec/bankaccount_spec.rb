@@ -31,4 +31,11 @@ describe BankAccount do
         bank_account = BankAccount.new
         expect(bank_account).to respond_to(:withdraw).with(1).argument
     end
+
+    it 'lets user withdraw money from account' do
+        bank_account = BankAccount.new
+        bank_account.deposit(10)
+        bank_account.withdraw(9)
+        expect(bank_account.balance).to eq(1)
+    end
 end
